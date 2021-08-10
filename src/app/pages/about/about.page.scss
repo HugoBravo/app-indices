@@ -1,0 +1,33 @@
+
+.header-logo {
+    display: flex;
+    justify-content: center;
+}
+
+.header-title {
+    display: flex;
+    justify-content: center;
+}
+
+.footer {
+    display: flex;
+    justify-content: center;
+}
+
+.footer div {
+    text-align: center;
+    justify-content: center;
+    width: 100vw;
+    font-size: 0.9rem;
+}
+
+.github {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    justify-content: center;
+}
+
+.github ion-icon {
+    font-size: 2.5rem;
+}

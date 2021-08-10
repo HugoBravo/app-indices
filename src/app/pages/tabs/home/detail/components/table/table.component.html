@@ -1,0 +1,24 @@
+<ion-card>
+  <ion-card-header>
+    <ion-card-subtitle>Datos</ion-card-subtitle>
+  </ion-card-header>
+
+  <ion-card-content>
+    
+      <ion-row>
+        <ion-col class="ion-text-left" size="6">Fecha</ion-col>
+        <ion-col class="ion-text-center"size="6">Valor</ion-col>
+      </ion-row>
+      
+      <ion-row>
+        <ion-col *ngIf="!data" class="ion-text-center" size="12"><ion-spinner></ion-spinner></ion-col>
+      </ion-row>
+
+      <ion-row *ngFor="let d of data">
+        <ion-col size="6">{{ d.fecha | date :  "dd.MMM.yyyy" }}</ion-col>
+        <ion-col class="ion-text-right" size="6">{{ d.valor | number }}</ion-col>
+      </ion-row>
+
+  </ion-card-content>
+</ion-card>
+

@@ -1,0 +1,7 @@
+{
+  "name": "indices",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

@@ -1,0 +1,49 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Calculadora</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-card *ngIf="this.indiceList && this.indiceData && this.selectedIndice">
+    <ion-item>
+      <!-- <ion-label>{{ selectedIndice }}</ion-label>  -->
+          <ion-select
+          [(ngModel)]="selectedIndice"
+          (ngModelChange)="selectIndice($event)">
+          <ion-select-option *ngFor="let i of indiceList" [value]="i.code">
+            {{ i.name }}
+          </ion-select-option>
+        </ion-select>
+
+        <p slot="end" class="rate">
+          {{ this.indiceData.valor| number }}
+        </p>
+
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item>
+      <!-- <ion-label class="rate">{{ rate | number }}</ion-label> -->
+      <ion-input
+        style="text-align: right"
+        autofocus="true"
+        type="number"
+        placeholder="0"
+        [(ngModel)]="this.input"
+        (change)='changeInput()'
+      ></ion-input>
+    </ion-item>
+  </ion-card>
+
+  <ion-card>
+    <ion-item *ngIf="this.indiceData">
+      <ion-label class="result" style="text-align: center">
+        {{ this.result | number }} /{{ this.indiceData.unidad_medida}}
+      </ion-label>
+    </ion-item>
+  </ion-card>
+  
+</ion-content>

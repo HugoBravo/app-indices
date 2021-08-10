@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar *ngIf="data">
+    <ion-title color="primary">{{ data.nombre }}</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text=""
+        defaultHref="/tabs/home"
+        color="primary"
+        icon="arrow-back"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <app-graph *ngIf="serie && labels && serie.length > 0 && labels.length > 0" [labels]="this.labels" [serie]="this.serie" [indice]="this.indice">
+  </app-graph>
+  
+  <app-table *ngIf="data" [data]="data.serie" >
+  </app-table>
+
+</ion-content>

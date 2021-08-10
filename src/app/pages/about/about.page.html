@@ -1,0 +1,84 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Acerca de</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text=""
+        defaultHref="/tabs/home"
+        color="primary"
+        icon="arrow-back"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <br>
+  <br>
+
+  <div class="header-logo">
+    <img src="../../../assets/icon-foreground.png" width="100px">
+  </div>
+
+  <div class="header-title">
+    <ion-text color="primary">Indices Econónicos Chilenos</ion-text>
+  </div>
+  
+  <br>
+  <br>
+
+    <!-- <ion-card>
+      <ion-card-header class="ion-text-center">
+        <ion-text color="secondary"><h6>API</h6></ion-text>
+      </ion-card-header>
+      <ion-card-content>
+
+        <ion-row *ngIf="apiHead">
+          <ion-col size="5">Autor:</ion-col>
+          <ion-col size="7">
+            <ion-text color="secondary">{{ apiHead.autor }}</ion-text>
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="apiHead">
+          <ion-col size="5">Versión:</ion-col>
+          <ion-col size="7">
+            <ion-text color="secondary">{{ apiHead.version }}</ion-text>
+          </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="apiHead">
+          <ion-col size="5">Fecha:</ion-col>
+          <ion-col size="7">
+            <ion-text color="secondary">{{ apiHead.fecha | date: "MMM dd, YYYY HH:mm" }}</ion-text>
+          </ion-col>
+        </ion-row>
+
+
+      </ion-card-content>
+    
+    
+    </ion-card> -->
+    <br>
+    <div class="github">
+      <a href="https://github.com/HugoBravo/app-indices" target="_blank">
+        <ion-icon color="primary" name="logo-github"></ion-icon>
+      </a>
+      
+    </div>
+    
+    <br>
+
+    <div class="footer">
+      <div color="secondary">
+        <ion-text color="secondary">
+          Made with ♡ by Hugo Bravo
+          <br>
+          Licencia GPL v3
+        </ion-text>
+      </div>
+    </div>
+</ion-content>
+
+

@@ -1,0 +1,32 @@
+.indice {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: xx-large;
+    font-weight: 600;
+    width: 100%;
+    color: #3dc2ff;
+}
+
+.unit{
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    width: 100%;
+}
+
+ion-footer {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+ion-card-header {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+ion-card-content {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}

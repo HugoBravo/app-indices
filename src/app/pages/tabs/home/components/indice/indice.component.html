@@ -1,0 +1,29 @@
+<ion-card (click)="getDetail( indice.codigo )" *ngIf="indice">
+
+  <ion-card-header>
+    <!-- <ion-card-subtitle>{{ i.nombre }}</ion-card-subtitle> -->
+     <ion-card-title>{{ indice.nombre }}</ion-card-title>
+     
+  </ion-card-header>
+
+  <ion-card-content>
+
+    <!-- <ion-text color="secondary">
+      <h1>{{ indice.valor | number }}</h1>
+    </ion-text> -->
+    
+    <div class="indice" >
+      {{ indice.valor | number }}
+    </div>
+    <div class="unit">
+      {{ indice.unidad_medida }}
+    </div>
+    
+
+  </ion-card-content>
+  <ion-footer class="ion-padding">
+    <ion-note>
+      {{ indice.fecha  | date :  "dd.MMM.YYYY, h:mm a" }}
+    </ion-note>
+  </ion-footer>
+</ion-card>

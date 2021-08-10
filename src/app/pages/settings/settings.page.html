@@ -1,0 +1,44 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title color="primary">Configuración</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button
+        text=""
+        defaultHref="/tabs/home"
+        color="primary"
+        icon="arrow-back"
+      ></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+
+  <ion-text color="primary"><h5>Apariencia</h5></ion-text>
+      <ion-list>
+        <ion-item>
+          <ion-icon slot="start" name="moon"></ion-icon>
+          <ion-label>Tema oscuro</ion-label>
+          <ion-toggle slot="end"
+                      [ngModel]="themeModeToggle"
+                      (ionChange)="changeThemeMode( $event )"></ion-toggle>
+        </ion-item>
+  
+      </ion-list>
+      <br>
+      <ion-text color="primary"><h5>Indices</h5></ion-text>
+
+      <ion-list *ngIf="indices">
+        <ion-item *ngFor="let i of indices">
+          <!-- <ion-icon slot="start" name="moon"></ion-icon> -->
+          <ion-label>{{ i.name }}</ion-label>
+          <ion-toggle
+            slot="end"
+            checked="{{i.show}}"
+            (ionChange)="changeIndice( $event, i.code )"
+          ></ion-toggle>
+        </ion-item>
+        <!-- [ngModel]="themeModeToggle" -->
+      </ion-list>
+
+</ion-content>
