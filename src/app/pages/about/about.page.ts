@@ -17,12 +17,6 @@ export class AboutPage implements OnInit {
   constructor( private dataLocalservice: SettingsService ) { }
 
   ngOnInit() {
-    this.getApiHead();
   }
-
-  async getApiHead(){
-    this.apiHead = await this.dataLocalservice.get('head')
-  }
-
 
 }

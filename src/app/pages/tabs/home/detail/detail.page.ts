@@ -37,7 +37,7 @@ export class DetailPage implements OnInit {
 
   async ngOnInit() {
     await this.presentLoading('Cargando... ');
-    this.data = await this.getDataFromApi();
+    this.data = await this.getDataFromApi( this.indice );
     const [ arrLabels,arrSerie ] = await this.extractGraphData(this.data);
 
     this.labels = arrLabels.map(value => value);
@@ -46,9 +46,9 @@ export class DetailPage implements OnInit {
     await this.loading.dismiss();
   }
 
-  getDataFromApi(): Promise<LastValues> {
+  getDataFromApi( code: string): Promise<LastValues> {
     return new Promise((resolve, reject) =>{
-      this.mindicadorService.getLast30Values(this.indice).subscribe((resp) => {
+      this.mindicadorService.getLast30Values(code).subscribe((resp) => {
         resolve( resp );
       });
     })

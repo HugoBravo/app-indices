@@ -21,7 +21,6 @@ export class CalculatorPage implements OnInit {
   public selectedIndice: string;
   public indiceData: IndiceData;
   public unit: number;
-  public onLine: boolean = false;
 
   private loading;
 
