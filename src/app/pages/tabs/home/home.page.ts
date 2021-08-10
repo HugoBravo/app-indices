@@ -50,9 +50,9 @@ export class HomePage implements OnInit {
     return arrCodes;
   }
 
-  getIndiceDataFromApi(): Promise<IndiceData> {
+  getIndiceDataFromApi(): Promise<IndiceData[]> {
     return new Promise( (resolve, reject) =>{
-      this.mindicadorService.getValues().subscribe((resp: IndiceData) => {
+      this.mindicadorService.getValues().subscribe((resp: IndiceData[]) => {
         resolve(resp);
       });
     });
@@ -61,7 +61,7 @@ export class HomePage implements OnInit {
   async getIndices(): Promise<IndiceData[]> {
     
     const indicesToShow = await this.getIndicesToShow();
-
+    
     const indicesFromAPI = await this.getIndiceDataFromApi();
 
     let dataToShow: IndiceData[] = []; 

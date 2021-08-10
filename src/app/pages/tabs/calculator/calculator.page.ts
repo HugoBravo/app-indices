@@ -32,9 +32,7 @@ export class CalculatorPage implements OnInit {
   async ngOnInit() {
 
     await this.presentLoading('Cargando... ');
-
-    this.onLine = navigator.onLine;
-    
+        
     await this.localdataService.init();
     
     this.indiceList = await this.getIndices();
@@ -101,7 +99,7 @@ export class CalculatorPage implements OnInit {
   }
 
   calculate(): number {
-    return this.indiceData.valor * this.input
+    return this.indiceData.valor * this.input;
   }
   
   changeInput() {
