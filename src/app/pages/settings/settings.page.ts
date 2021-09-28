@@ -41,6 +41,7 @@ export class SettingsPage implements OnInit {
     const objIndex = this.indices.findIndex((obj => obj.code == code ));
 
     const show: boolean = e.detail.checked;
+    
     this.indices[objIndex].show = show;
     
     this._settings.set('indices', this.indices);

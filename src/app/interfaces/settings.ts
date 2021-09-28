@@ -3,4 +3,5 @@ export interface IndiceConfig {
     name: string;
     show: boolean;
     calculator: boolean;
+    periodicity: string;
 }

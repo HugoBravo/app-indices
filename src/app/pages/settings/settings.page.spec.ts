@@ -5,8 +5,6 @@ import { Drivers, Storage } from '@ionic/storage';
 
 import { SettingsPage } from './settings.page';
 import { UrlSerializer } from '@angular/router';
-import defaultConfig from 'src/app/data/defaultConfig';
-
 
 describe('SettingsPage', () => {
   let component: SettingsPage;
