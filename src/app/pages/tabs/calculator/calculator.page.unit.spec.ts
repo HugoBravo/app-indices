@@ -62,4 +62,18 @@ describe('CalculatorPage Unit', () => {
 
   });
 
+  it('should call to service when getIndiceData() is called', () => {
+
+    const spy = spyOn( serviceAPI, 'getValues').and.callFake(() => (null));
+    
+    page.getIndiceData( 'dolar' );
+
+    expect( spy ).toHaveBeenCalled();
+
+  });
+
+
+
+
+
 });

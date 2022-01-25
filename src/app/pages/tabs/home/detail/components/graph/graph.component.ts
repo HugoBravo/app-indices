@@ -9,7 +9,7 @@ import { Chart, registerables } from 'chart.js';
 })
 export class GraphComponent implements AfterViewInit {
 
-  @ViewChild('lineCanvas') private lineCanvas: ElementRef;
+  @ViewChild('lineCanvas') public lineCanvas: ElementRef;
   
   lineChart: any;
 
